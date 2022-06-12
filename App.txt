@@ -1,0 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Aboutus from './components/Aboutus/Aboutus';
+import Courses from './components/Courses/Courses';
+import Home from './components/Home/Home';
+import Navigation from './components/Navigation/Navigation';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+      <Navigation/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<Aboutus/>}/>
+        <Route path='/courses' element={<Courses/>}/>
+      </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

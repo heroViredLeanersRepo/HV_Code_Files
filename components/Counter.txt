@@ -1,0 +1,42 @@
+import React,{Component} from 'react';
+
+
+class Counter extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 0
+        }
+        this.increase = this.increase.bind(this);
+        this.decrease = this.decrease.bind(this);
+        
+        console.log('constructor is invoked');
+    }
+    render(){
+        console.log('render is invoked');
+        return(
+            <div> 
+                <h1>{this.state.count}</h1>
+                <button onClick={this.decrease}>Decrease</button>
+                <button onClick={this.increase}>Increase</button>
+            </div>
+        );
+    }
+
+    componentDidMount(){
+        console.log('cdm is invoked');
+    }
+
+    componentDidUpdate(){
+        console.log('cdu is invoked');
+    }
+
+    increase(){
+        this.setState({count: this.state.count + 1});
+    }
+    decrease(){
+        this.setState({count: this.state.count - 1});
+    }
+}
+
+export default Counter;

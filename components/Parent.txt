@@ -1,0 +1,17 @@
+import React,{Component} from 'react';
+import Child from './Child.js';
+
+class Parent extends Component{
+
+    render(){
+        return(
+            <div>
+                <Child fruit='mango'>Hello World!</Child>
+                <Child fruit='kiwi'>Hello Java!</Child>
+                <Child fruit='orange'>Hello JavaScript!</Child>
+            </div>
+        );
+    }
+}
+
+export default Parent;

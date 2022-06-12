@@ -1,0 +1,15 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import ApiCall from './components/ApiCall.js';
+import Counter from './components/Counter';
+import InputComponent from './components/InputComponent';
+import InputString from './components/InputString/InputString';
+import EffectDemo from './components/EffectDemo/EffectDemo';
+import App from './App';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <App/>
+);

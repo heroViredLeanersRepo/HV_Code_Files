@@ -1,0 +1,21 @@
+import {useState} from 'react';
+
+
+const InputString = (props) => {
+
+    const [value,setValue] = useState('');
+
+    const handleChange = (e) => {
+        let inputString = e.target.value;
+        setValue(inputString);
+    }
+
+    return(
+        <div>
+            <input type='text' onChange={handleChange}/>
+            <h3>{value}</h3>
+        </div>
+    );
+}
+
+export default InputString;
